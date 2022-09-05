@@ -1,0 +1,32 @@
+Answer :  
+
+public class CheckOutput {
+    public static void main(String args[])
+    
+    {
+          try
+        {
+         System.out.print("A");
+          int num = 99/0;
+         System.out.print("B");
+         }
+         catch(ArithmeticException ex)
+         {
+         System.out.print("C");
+         }
+         catch(Exception ex)
+         {
+         System.out.print("D");
+         }
+         System.out.print("E");
+         }
+   }
+   
+   the output of the above code snippet will be :
+   "ACE"
+   because at line number 10 the compiler will encounter an exception arithmetic exception and will create the
+   object of ArithmeticException class, after that the compiler will skip all the lines below line number 10 
+   and directly go to the catch block which has a parameter of ArithmeticException class so it will go to the 
+   line number 13 and than at line number 14 and will print "C" after that it will skip all the catch blocks 
+   because one catch block already has been executed so it will jump to line number 21 and will print "E".
+    
